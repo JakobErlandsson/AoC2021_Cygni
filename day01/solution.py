@@ -1,4 +1,6 @@
 from os import getenv
+import numpy as np
+
 input = [int(i) for i in open('input.txt', 'r').read()[:-1].split('\n')]
 
 def get_primes(n):
