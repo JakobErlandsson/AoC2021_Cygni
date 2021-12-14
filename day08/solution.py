@@ -1,7 +1,6 @@
 from os import getenv
 input = [i.split(' | ') for i in open('input.txt', 'r').read()[:-1].split('\n')]
-if getenv('part') == 'part1':
-    print(sum([sum([len(sig) in [2,3,4,7] for sig in sig_out.split(' ')]) for (_,sig_out) in input]))
+if getenv('part') == 'part1': print(sum([sum([len(sig) in [2,3,4,7] for sig in sig_out.split(' ')]) for (_,sig_out) in input]))
 else:
     (numbers, ans) = ({'012456':'0','25':'1','02346':'2','02356':'3','1235':'4','01356':'5','013456':'6','025':'7','0123456':'8','012356':'9'}, 0)
     for (s_in, s_out) in input:
